@@ -8,7 +8,7 @@ def print_menu():
 def encoder(string):
     res = []
     for i in string:
-        res.append(str(int(i) + 3))
+        res.append(str((int(i) + 3) % 10))
     res = ''.join(res)
     return res
 
