@@ -13,6 +13,14 @@ def encoder(string):
     return res
 
 
+def decoder(string):
+    res = []
+    for i in string:
+        res.append(str((int(i) - 3) % 10))
+    res = ''.join(res)
+    return res
+
+
 def main():
     while True:
         print_menu()
@@ -23,7 +31,7 @@ def main():
 
         elif user_choice == 2:
             encoded_string = encoder(user_string)
-            print(f'The encoded password is {encoded_string}, and the original password is {user_string}.')
+            print(f'The encoded password is {encoded_string}, and the original password is {user_string}.\n')
 
         elif user_choice == 3:
             break
